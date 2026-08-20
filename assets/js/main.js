@@ -1,4 +1,4 @@
-JsBarcode('#barcode', '077120006197900286', {
+JsBarcode('#barcode', barCode, {
     format: 'CODE128', // формат штрих-кода
     displayValue: true, // отображать ли текстовое значение под кодом
     fontSize: 20, // размер шрифта
