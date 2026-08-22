@@ -25,7 +25,7 @@ values.forEach((value, i) => {
             height: 100,
             displayValue: true,
             margin: 10,
-            fontSize: 20
+            fontSize: 30
         });
     } catch (e) {
         console.error(`Не удалось сгенерировать штрихкод для "${value}":`, e.message);

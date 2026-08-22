@@ -1,5 +1,9 @@
+* {
+    box-sizing: border-box;
+}
 .barcodes {
     display: flex;
+    flex-wrap:  wrap;
 }
 .barcode-item {
     display: block;
