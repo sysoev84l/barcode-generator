@@ -22,7 +22,7 @@ values.forEach((value, i) => {
         JsBarcode(svg, value, {
             format: "CODE128",     // авто-режим, принимает любые ASCII-строки
             width: 2,
-            height: 100,
+            height: 150,
             displayValue: true,
             margin: 10,
             fontSize: 30
