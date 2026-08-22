@@ -11,9 +11,9 @@ values.forEach((value, i) => {
     wrapper.appendChild(svg);
 
     // Подпись значением
-    const label = document.createElement("p");
-    label.textContent = value;
-    wrapper.appendChild(label);
+    //const label = document.createElement("p");
+    //label.textContent = value;
+    //wrapper.appendChild(label);
 
     container.appendChild(wrapper);
 
