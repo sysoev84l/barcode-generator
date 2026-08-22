@@ -22,10 +22,10 @@ values.forEach((value, i) => {
         JsBarcode(svg, value, {
             format: "CODE128",     // авто-режим, принимает любые ASCII-строки
             width: 2,
-            height: 60,
+            height: 100,
             displayValue: true,
             margin: 10,
-            fontSize: 14
+            fontSize: 20
         });
     } catch (e) {
         console.error(`Не удалось сгенерировать штрихкод для "${value}":`, e.message);
