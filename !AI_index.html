@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Штрихкоды</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.12.3/dist/JsBarcode.all.min.js"></script>
+    <style>
+        .barcode-item {
+            display: inline-block;
+            margin: 12px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .barcode-item p {
+            margin: 6px 0 0;
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="barcodes"></div>
+
+    <script>
+        // Массив строк — замените на свой
+        const values = [
+            "1234567890128",
+            "BIN-A-042",
+            "9785389027",
+            "CODE-777",
+            "2026-08-22"
+        ];
+
+        const container = document.getElementById("barcodes");
+
+        values.forEach((value, i) => {
+            // Обёртка с подписью
+            const wrapper = document.createElement("div");
+            wrapper.className = "barcode-item";
+
+            // SVG-элемент для штрихкода
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.id = `barcode-${i}`;
+            wrapper.appendChild(svg);
+
+            // Подпись значением
+            const label = document.createElement("p");
+            label.textContent = value;
+            wrapper.appendChild(label);
+
+            container.appendChild(wrapper);
+
+            // Генерация штрихкода
+            try {
+                JsBarcode(svg, value, {
+                    format: "CODE128",     // авто-режим, принимает любые ASCII-строки
+                    width: 2,
+                    height: 60,
+                    displayValue: true,
+                    margin: 10,
+                    fontSize: 14
+                });
+            } catch (e) {
+                console.error(`Не удалось сгенерировать штрихкод для "${value}":`, e.message);
+            }
+        });
+    </script>
+</body>
+
+</html>

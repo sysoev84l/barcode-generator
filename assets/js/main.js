@@ -1,36 +1,33 @@
-// let box = document.querySelector('.box');
-//let element = document.createElement('div');
-JsBarcode('#barcode', barCode, {
-  format: 'CODE128', // формат штрих-кода
-  displayValue: true, // отображать ли текстовое значение под кодом
-  fontSize: 20, // размер шрифта
-  width: 2, // ширина полос
-  height: 100 // высота
+const container = document.getElementById("barcodes");
+
+values.forEach((value, i) => {
+    // Обёртка с подписью
+    const wrapper = document.createElement("div");
+    wrapper.className = "barcode-item";
+
+    // SVG-элемент для штрихкода
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.id = `barcode-${i}`;
+    wrapper.appendChild(svg);
+
+    // Подпись значением
+    const label = document.createElement("p");
+    label.textContent = value;
+    wrapper.appendChild(label);
+
+    container.appendChild(wrapper);
+
+    // Генерация штрихкода
+    try {
+        JsBarcode(svg, value, {
+            format: "CODE128",     // авто-режим, принимает любые ASCII-строки
+            width: 2,
+            height: 60,
+            displayValue: true,
+            margin: 10,
+            fontSize: 14
+        });
+    } catch (e) {
+        console.error(`Не удалось сгенерировать штрихкод для "${value}":`, e.message);
+    }
 });
-JsBarcode('#barcode2', barCode, {
-  format: 'CODE128', // формат штрих-кода
-  displayValue: true, // отображать ли текстовое значение под кодом
-  fontSize: 20, // размер шрифта
-  width: 2, // ширина полос
-  height: 100 // высота
-});
-barCodeList.forEach((item, index, array) => {
-  let box = document.querySelector('#box');
-  let element = document.createElement('div');
-  // element.setAttribute('id', item.toString);
-  element.className = 'element';
-  box.appendChild(element);
-  let svg = document.createElement('svg');
-  element.appendChild(svg);
-  svg.id = `s${item}`;
-})
-barCodeList.forEach((item, index, element) => {
-  console.log(`#s${item}`);
-  JsBarcode(`#s${item}`, barCode, {
-    format: 'CODE128', // формат штрих-кода
-    displayValue: true, // отображать ли текстовое значение под кодом
-    fontSize: 20, // размер шрифта
-    width: 2, // ширина полос
-    height: 100 // высота
-  });
-})
