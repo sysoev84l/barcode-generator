@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    justify-content: space-around;
 }
 .barcodes {
     display: flex;
     flex-wrap:  wrap;
+    justify-content: space-around;
 }
 .barcode-item {
     display: block;
