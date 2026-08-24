@@ -1,5 +1,10 @@
 const container = document.getElementById("barcodes");
 
+ok = document.getElementById('ok');
+ok.addEventListener('click', function(e) {
+    uploadFile();
+})
+
 values.forEach((value, i) => {
     // Обёртка с подписью
     const wrapper = document.createElement("div");
