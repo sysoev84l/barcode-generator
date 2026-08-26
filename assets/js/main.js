@@ -1,4 +1,4 @@
-const container = document.getElementById("barcodes");
+const container = document.querySelector("#barcodes");
 
 values.forEach((value, i) => {
     // Обёртка с подписью
