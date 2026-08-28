@@ -11,7 +11,33 @@
 </head>
 
 <body>
+  <form action="" enctype="multipart/form-data" method="POST">
+    <div class="form-group">
+      <label for="file">Example file input</label>
+      <input class="form-control-file" type="file" id="file" name="file">
+    </div>
 
+    <div class="row">
+      <div class="col-6">
+        <button type="reset" class="form-control btn btn-primary">Сбросить</button>
+      </div>
+      <div class="col-6">
+        <button type="submit" class="form-control btn btn-primary">Применить</button>
+      </div>
+    </div>
+  </form>
+  <?php
+  if (isset($_FILES) && !empty($_FILES) && $_FILES['file']['error'] == 0) { // Проверяем, загрузил ли пользователь файл
+    // print_r_pre($_FILES);
+    // print_r_pre($POST);
+    $destiation = dirname(__FILE__) . '/assets/js/' . $_FILES['file']['name'];
+    // Директория для размещения файла
+    move_uploaded_file($_FILES['file']['tmp_name'], $destiation); //Перемещаем файл в желаемую директорию
+    echo 'File Uploaded'; // Оповещаем пользователя об успешной загрузке файла
+  } else {
+    echo 'No File Uploaded'; // Оповещаем пользователя о том, что файл не был загружен
+  }
+  ?>
   <div id="barcodes" class="barcodes"></div>
 
   <script src="./assets/js/upload.js"></script>
