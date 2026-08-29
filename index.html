@@ -14,19 +14,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
 </head>
 
 <body>
-  <h1>This is a barcode generator</h1>
+  <h1 class="h1">This is a barcode generator</h1>
   <form action="" enctype="multipart/form-data" method="POST">
     <div class="form-group">
       <label for="file">Example file input</label>
-      <input class="form-control-file" type="file" id="file" name="file">
+      <input class="file" type="file" id="file" name="file">
     </div>
 
-    <div class="row">
-      <div class="col-6">
-        <button type="reset" class="form-control btn btn-primary">Сбросить</button>
+    <div class="btns__wrap">
+      <div class="btn_wrap">
+        <button type="reset" class="btn">Сбросить</button>
       </div>
-      <div class="col-6">
-        <button type="submit" class="form-control btn btn-primary">Применить</button>
+      <div class="btn_wrap">
+        <button type="submit" class="btn">Применить</button>
       </div>
     </div>
   </form>
