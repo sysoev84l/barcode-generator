@@ -15,13 +15,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
 
 <body>
   <h1 class="h1">This is a barcode generator</h1>
-  <form action="" enctype="multipart/form-data" method="POST">
+  <form clas="form" action="" enctype="multipart/form-data" method="POST">
     <div class="form-group">
       <label for="file">Example file input</label>
       <input class="file" type="file" id="file" name="file">
     </div>
 
-    <div class="btns__wrap">
+    <div class="btns__wrap" >
       <div class="btn_wrap">
         <button type="reset" class="btn">Сбросить</button>
       </div>
@@ -37,9 +37,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
     $destiation = dirname(__FILE__) . '/assets/js/' . $_FILES['file']['name'];
     // Директория для размещения файла
     move_uploaded_file($_FILES['file']['tmp_name'], $destiation); //Перемещаем файл в желаемую директорию
+    echo "<div class = 'notification' >";
     echo 'File Uploaded'; // Оповещаем пользователя об успешной загрузке файла
+    echo "</div>";
   } else {
+    echo "<div class = 'notification' >";
     echo 'No File Uploaded'; // Оповещаем пользователя о том, что файл не был загружен
+    echo "</div>";
   }
   ?>
   <div id="barcodes" class="barcodes"></div>

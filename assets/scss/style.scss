@@ -3,30 +3,42 @@
     padding: 0;
     margin: 0;
 }
+
 .h1 {
     margin: 20px;
 }
+
+.form {
+    
+}
+.notification {
+    margin: 5px 20px 0 20px;  
+    
+}
 .form-group {
     display: flex;
-    flex-direction: column;
-    margin: 20px;
+    //flex-direction: column;
+    margin: 0 20px 0 20px;
 
     label {
         font-size: 22px;
-        margin: 5px;
+        margin: 0 10px 0 5px;
     }
+
     .file {
         font-size: 22px;
     }
 }
+
 .btns__wrap {
-    margin-top: 10px;
-    padding: 5px;
+    margin: 10px 20px 0 20px;
+    //padding: 5px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
     .btn_wrap {
-        width: 49%;
+        width: 40%;
 
         .btn {
             width: 100%;
@@ -50,6 +62,7 @@
     }
 
 }
+
 
 .barcodes {
     display: flex;
