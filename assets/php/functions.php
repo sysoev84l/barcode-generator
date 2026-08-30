@@ -1,13 +1,4 @@
 <?php
-function get_price($obj, $date_start)
-{
-  $date_start = strtotime($date_start);
-  foreach ($obj as $item) {
-    if ($date_start >= strtotime($item['since_date'])) {
-      return ($item['price']);
-    }
-  }
-}
 function get_sn()
 {
   if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')
