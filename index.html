@@ -30,13 +30,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
   </form>
   <?php
   if (isset($_FILES) && !empty($_FILES) && $_FILES['file']['error'] == 0) { // Проверяем, загрузил ли пользователь файл
-    $destiation = dirname(__FILE__) . '/assets/js/' . $_FILES['file']['name'];
     // Директория для размещения файла
-    move_uploaded_file($_FILES['file']['tmp_name'], $destiation); //Перемещаем файл в желаемую директорию
+    $destiation = dirname(__FILE__) . '/assets/js/' . $_FILES['file']['name'];
+    //Перемещаем файл в желаемую директорию
+    move_uploaded_file($_FILES['file']['tmp_name'], $destiation); 
+
     echo "<div class = 'notification'>";
     echo "File Uploaded"; // Оповещаем пользователя об успешной загрузке файла
     echo "</div>";
-  } else {
+  } 
+  
+  else {
     echo "<div class = 'notification' >";
     echo "No File Uploaded"; // Оповещаем пользователя о том, что файл не был загружен
     echo "</div>";
