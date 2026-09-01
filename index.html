@@ -9,8 +9,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
   <title>Штрихкоды</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/JsBarcode.all.min.js"></script>
-  <script src="./assets/js/values.js"></script>
 </head>
 
 <body>
@@ -44,9 +42,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
     echo "</div>";
   }
   ?>
+
+
   <div id="barcodes" class="barcodes"></div>
 
-  <script src="./assets/js/upload.js"></script>
+  <script src="./assets/js/JsBarcode.all.min.js"></script>
+  <script src="./assets/js/values.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
