@@ -1,3 +1,7 @@
+const hostName = document.location.href;
+const hostNameLink = document.querySelector('.host-name');
+hostNameLink.href = hostName;
+hostNameLink.innerHTML = hostName;
 const container = document.querySelector("#barcodes");
 
 values.forEach((value, i) => {
@@ -21,11 +25,11 @@ values.forEach((value, i) => {
     try {
         JsBarcode(svg, value, {
             format: "CODE128",     // авто-режим, принимает любые ASCII-строки
-            width: 3,
-            height: 150,
+            width: 2,
+            height: 100,
             displayValue: true,
-            margin: 10,
-            fontSize: 38
+            margin: 5,
+            fontSize: 18
         });
     } catch (e) {
         console.error(`Не удалось сгенерировать штрихкод для "${value}":`, e.message);
