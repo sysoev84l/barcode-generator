@@ -230,82 +230,10 @@ body {
         letter-spacing: 2px;
     }
 
-    .outline-text {
-        color: transparent;
-        -webkit-text-stroke: 0.5px black;
-        text-stroke: 0.5px black;
-        text-shadow: 1.1px 1.1px #6C757D;
-    }
-    .section__form_add {
-
-        margin-top: 8px;
-
-        .form_add {
-            .add_data {
-                padding: 2px;
-                margin-bottom: 5px;
-
-                label {
-                    display: block;
-                    color: rgb(33, 37, 41);
-                    font-size: 12px;
-                    margin-bottom: 3px;
-                }
-
-                input {
-                    padding: 3.25px 5.25px;
-                    font-size: 10px;
-                }
-            }
-
-            .radio__wrap {
-                font-size: 14px;
-
-                .radio__title {
-                    margin-right: 5px;
-                }
-
-                .radio__form {
-                    .radio__form_item {
-                        display: flex;
-                        align-items: center;
-
-                        input {
-                            margin-right: 3px;
-                        }
-
-                        margin-right: 5px;
-                    }
-                }
-            }
-
-            .btns__wrap {
-                margin-top: 5px;
-
-                .btn_wrap {
-                    width: 49%;
-
-                    .btn {
-                        width: 100%;
-                        padding: 5px 0;
-                        font-size: 12px;
-                    }
-                }
-
-            }
-        }
-    }
-
     .h2 {
         margin: 10px 0 5px 0;
         font-size: 12px;
         letter-spacing: 2px;
-    }
-
-    .table__wrap {
-        .table {
-            font-size: 12px;
-        }
     }
 
     .footer {
