@@ -172,8 +172,12 @@ body {
             width: auto
         }
 
+        .git-hub {
+            flex: 1 1 0;
+        }
+
         .copyright {
-            flex-grow: 1;
+            flex: 2 1 0;
             margin: 0;
             font-size: 14px;
             text-align: center;
