@@ -43,8 +43,15 @@ body {
         .header__title {
             flex: 1 1 auto;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            h3 {
+                font-family: ElizabetaModern;
+                letter-spacing: 3px;
+                text-transform: uppercase;    
+            }
 
             h2 {
                 font-family: ElizabetaModern;
@@ -175,10 +182,27 @@ body {
 
 @media screen and (max-width: 1920px) {
     .container {
-        width: 1800px;
+        width: 1700px;
     }
 }
 
+@media screen and (max-width: 1680px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        width: 1220px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 1140px;
+    }
+}
 @media screen and (max-width: 1200px) {
     .container {
         width: 960px;
@@ -218,6 +242,11 @@ body {
             }
 
             .header__title {
+                h3 {
+                    font-size: 10px;
+                    letter-spacing: 1.5px;
+
+                }
                 h2 {
                     font-size: 11px;
                     letter-spacing: 1.5px;

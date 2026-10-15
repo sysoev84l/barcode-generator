@@ -23,9 +23,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
             </a>
           </div>
           <div class="header__title">
+            <h3>Senior full stack developer presents</h3>
             <h2>This is a barcode generator</h2>
           </div>
-          
+          <div class="header__img_wrap">
+            <a href="https://github.com/sysoev84l" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/img/logo/4.jpg" alt="">
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -36,7 +41,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
       <div class="container">
 
 
-      <!-- <h1 class="h1">This is a barcode generator</h1> -->
+        <!-- <h1 class="h1">This is a barcode generator</h1> -->
 
 
         <form clas="form" action="" enctype="multipart/form-data" method="POST">
@@ -55,7 +60,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
           </div>
         </form>
 
-        <!--       <?php
+        <!--       
+          <?php
   if (isset($_FILES) && !empty($_FILES) && $_FILES['file']['error'] == 0) { // Проверяем, загрузил ли пользователь файл
     // Директория для размещения файла
     $destiation = dirname(__FILE__) . '/assets/js/data/' . $_FILES['file']['name'];
@@ -86,21 +92,21 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
     </main>
     <footer class='footer'>
       <div class="container">
-          <div class="footer-wrap">
-              <div class='git-hub'>
-                  <a href="https://github.com/sysoev84l/barcode-generator.git" target='_blank' rel="noreferrer">
-                      <i class="fab fa-github"></i> GitHub
-                  </a>
-              </div>
-              <p class='copyright'>
-                  &copy; Все права защищены
-              </p>
-              <div class='host-name-wrap'>
-                  <a href='' class='host-name'> </a>
-              </div>
+        <div class="footer-wrap">
+          <div class='git-hub'>
+            <a href="https://github.com/sysoev84l/barcode-generator.git" target='_blank' rel="noreferrer">
+              <i class="fab fa-github"></i> GitHub
+            </a>
           </div>
+          <p class='copyright'>
+            &copy; Все права защищены
+          </p>
+          <div class='host-name-wrap'>
+            <a href='' class='host-name'> </a>
+          </div>
+        </div>
       </div>
-  </footer>
+    </footer>
   </div>
 
   <script src="./assets/js/JsBarcode.all.min.js"></script>
