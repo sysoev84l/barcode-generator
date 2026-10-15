@@ -165,19 +165,20 @@ body {
     .footer-wrap {
         display: flex;
         justify-content: space-between;
+        width: 100%;
         align-items: center;
         text-align: center;
 
-        .git-hub, .host-name-wrap {
-            width: auto
-        }
 
-        .git-hub {
-            flex: 1 1 0;
+
+        .left,
+        .right {
+            width: auto;
+            flex-basis: 0;
         }
 
         .copyright {
-            flex: 2 1 0;
+            flex-grow: 0;
             margin: 0;
             font-size: 14px;
             text-align: center;
