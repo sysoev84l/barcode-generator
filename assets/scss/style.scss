@@ -168,16 +168,16 @@ body {
         align-items: center;
         text-align: center;
 
-        .git-hub {}
+        .git-hub, .host-name-wrap {
+            width: auto
+        }
 
         .copyright {
-            flex: 1 1 auto;
+            flex-grow: 1;
             margin: 0;
             font-size: 14px;
             text-align: center;
         }
-
-        .host-name-wrap {}
     }
 }
 
