@@ -1,5 +1,4 @@
-let hostName = document.location.href;
-if (hostName.endsWith('/index.html')) hostName = hostName.toLowerCase().replace(/index.html$/, "");
+const hostName = document.location.href;
 const hostNameLink = document.querySelector('.host-name');
 hostNameLink.href = hostName;
 hostNameLink.innerHTML = hostName;
