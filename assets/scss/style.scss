@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    width: 1170px;
+    width: 2000px;
     margin: 0 auto;
 }
 
@@ -259,7 +259,7 @@ body {
                 }
 
                 h2 {
-                    font-size: 11px;
+                    font-size: 15px;
                     letter-spacing: 1.5px;
 
                 }
@@ -269,6 +269,15 @@ body {
 
     .content {
         margin: 12px 0;
+
+        .barcodes {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .barcode-item {
+                width: 100% !important; 
+            }
+        }
     }
 
     .h1 {
@@ -281,6 +290,7 @@ body {
         font-size: 12px;
         letter-spacing: 2px;
     }
+
 
     .footer {
         .footer-wrap {
