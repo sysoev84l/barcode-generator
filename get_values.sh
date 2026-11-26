@@ -6,7 +6,7 @@ awk '{
     if (NR > 1) {
         printf ", ";
     }
-    printf "\"%s\"\r\n," $0;
+    printf "\"%s\"", $0;
 } END {
     printf "\n";
 }' "$input_file" > "$output_file"
