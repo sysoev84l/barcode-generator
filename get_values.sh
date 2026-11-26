@@ -4,7 +4,7 @@ output_file="./assets/js/data/values.js"
 
 awk '{
     if (NR > 1) {
-        printf ", ";
+        printf ", "\n\r;
     }
     printf "\"%s\"", $0;
 } END {
