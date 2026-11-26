@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Генерируем values.js
+echo Генерируем values.js!
 input_file="input.txt"
 output_file="./assets/js/data/values.js"
 
