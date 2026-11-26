@@ -9,7 +9,7 @@ awk '{
     }
     printf "\"%s\"", $0;
 } END {
-    printf "\n";
+    printf "\r\n";
 }' "$input_file" > "$output_file"
 sed -i 's/;/", "/g' "$output_file"
 awk 'BEGIN{print "const values = ["} {print}' $output_file > temp.txt && mv temp.txt $output_file
