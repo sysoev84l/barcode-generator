@@ -1,4 +1,5 @@
 #!/bin/bash
+echo Получаем values.js
 input_file="input.txt"
 output_file="./assets/js/data/values.js"
 
