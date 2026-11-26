@@ -10,6 +10,6 @@ awk '{
 } END {
     printf "\n";
 }' "$input_file" > "$output_file"
-sed -i 's/;/", "/g' "$output_file"
+sed -i 's/;/","\r\n/g' "$output_file"
 awk 'BEGIN{print "const values = ["} {print}' $output_file > temp.txt && mv temp.txt $output_file
 sed -i -e '$a]' $output_file
