@@ -12,3 +12,8 @@ if [ -z "$1" ]; then
     exit 1
 fi
 ./git_pull.sh $1
+if [ $? -eq 0 ]; then
+    echo "Коммит $1 успешно создан!"
+else
+    echo "Произошла ошибка: код $?"
+fi
