@@ -24,6 +24,7 @@ body {
     flex-direction: column;
 }
 
+
 .header {
     padding: 20px 0 5px 0;
     background: #000;
@@ -281,16 +282,24 @@ body {
         }
     }
 
-    .h1 {
-        font-size: 14px;
-        letter-spacing: 2px;
+    .header {
+        .header__wrap {
+            .header__title {
+                h3 {
+                    font-size: 6px;
+                    letter-spacing: 2px;
+                }
+            
+                h2 {
+                    margin: 10px 0 5px 0;
+                    font-size: 8px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
     }
 
-    .h2 {
-        margin: 10px 0 5px 0;
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
+    
 
 
     .footer {
