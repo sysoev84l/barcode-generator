@@ -221,6 +221,10 @@ body {
 
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+
     .header {
 
         .header__wrap {
@@ -248,9 +252,7 @@ body {
             }
         }
     }
-    .container {
-        width: 720px;
-    }
+
 }
 
 /* 576px - 768px */
@@ -264,7 +266,7 @@ body {
 /* 320px - 576px */
 @media screen and (max-width: 576px) {
     .container {
-        width: 90%;
+        width: 0%;
     }
 
 
