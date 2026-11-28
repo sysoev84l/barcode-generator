@@ -275,11 +275,6 @@ body {
     .content {
         margin: 12px 0;
 
-        .barcodes {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-        }
     }
 
     .header {
@@ -289,7 +284,7 @@ body {
                     font-size: 6px;
                     letter-spacing: 2px;
                 }
-            
+
                 h2 {
                     margin: 10px 0 5px 0;
                     font-size: 8px;
@@ -299,7 +294,7 @@ body {
         }
     }
 
-    
+
 
 
     .footer {
